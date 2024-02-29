@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown timer</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="container">
+    <img src="https://www.apple.com/v/iphone-15-pro/c/images/overview/contrast/iphone_15pro__3nx4u28gc026_large_2x.jpg" class="phone">
+
+    <div class="content">
+        <h1><span>BRAND NEW</span> IPHONE GIVEAWAY </h1>
+        <h3>Win a brand new iphone by following these easy steps:</h3>
+        <p>1.Follow all our social media platforms.</p>
+        <p>2.Comment and tag atleast 5 friends that are following us on all social media platforms. </p>
+        <p>3.Create a video of why you should win this brand new iphone, post it on instagram and tiktok and tag us.</p>
+        <p>4.Wait for us to announce the 3 lucky winners.</p>
+        <br>
+        <p>With these simple and easy steps you stand a chance to win a brand new Iphone!</p>
+        <p>What are you waiting for, create your video now and wait for out feedback.Dont miss this opportunity!</p>
+        <h4><span>Good luck!</span></h4>
+        <h2>OFFER ENDS IN:</h2>
+        <div class="launch-time">
+            <div>
+                <p id="days">00</p>
+                <span>Days</span>
+            </div>
+            <div>
+                <p id="hours">00</p>
+                <span>Hours</span>
+            </div>
+            <div>
+                <p id="minutes">00</p>
+                <span>Minutes</span>
+            </div>
+            <div>
+                <p id="seconds">00</p>
+                <span>Seconds</span>
+            </div>
+        </div>
+        <a href="https://www.tiktok.com">
+            <button type="button">Follow our tiktok<img src="https://wallpapers.com/images/hd/tiktok-background-se4cctp88q3qhr2v.jpg"></button>
+        <br>
+        <a href="https://www.instagram.com">
+            <button type="button">Follow our instagram<img src="https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2018/03/instagram-cronological-order-news-feed.jpg"> </button>
+        </a>
+        <br>
+        <a href="https://facebook.com">
+            <button type="button">Follow our facebook<img src="https://1000logos.net/wp-content/uploads/2016/11/facebook-symbol.jpg"></button>
+        </a>
+
+    </div>
+</div> 
+
+<script>
+   var countDownDate = new Date("March 24, 2024 00:00:00").getTime();
+   var x = setInterval(function(){
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+
+    var days = Math.floor(distance /(1000*60*60*24));
+    var hours = Math.floor((distance %(1000*60*60*24))/(1000*60*60));
+    var minutes = Math.floor((distance %(1000*60*60))/(1000*60));
+    var seconds = Math.floor((distance %(1000*60))/1000);
+    
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
+    if(distance < 0){
+       clearInterval(x);
+       document.getElementById("days").innerHTML = "00";
+       document.getElementById("hours").innerHTML = "00";
+       document.getElementById("minutes").innerHTML = "00";
+       document.getElementById("seconds").innerHTML = "00";
+
+    }
+  },1000);
+</script>
+
+</body>
+</html>
